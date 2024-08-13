@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Manuel Montenegro Montes homepage</title>
+		<link href="https://css.gg/css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@500;700;900&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/normal.css">
+		<script>const current = "research";</script>
+		<script src="js/normal.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo-button">
+				<a id="logo_small" href="index.html">M<sup>3</sup></a>
+				<a id="logo_big" href="index.html">Manuel Montenegro Montes</a>
+				<div id="menubutton" onclick="toggleMenu()">
+					<img id="toggle" src="img/menu.svg">		
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li data-content="about" id="about"><a href="about.html">About</a></li>
+					<li data-content="research" id="research"><a href="research.html">Research</a></li>
+					<!-- <li data-content="teaching"><a href="">Teaching</a></li> -->
+					<li data-content="theses" id="theses"><a href="theses.html">Theses</a></li>
+					<li data-content="contact" id="contact"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+            <h1>Research</h1>
+
+<h2>Research interests</h2>
+
+
+<p>I carry out research mainly in the field of formal verification of programs. In particular, I study the development of computer-aided verification systems, and their application to complex data structures and algorithms.</p>
+
+<p>More specifically, my current lines of research are the following:</p>
+
+
+<ul>
+	<li><b>Formal verification of heap-based mutable data structures</b>
+
+		<p>We use the <a href="https://dafny.org/">Dafny</a> language to formally verify a number of data structures: linked lists, red-black trees, etc. Although verification of abstract data types have been studied for several decades, we focus on the methological aspects that allow us to carry out this task on mutable data structures while maintaining proper encapsulation. See, for example, <a href="#journals/jlap/BlazquezMS23">JLAMP 2023 paper</a>, and <a href="TODO">Jorge Blazquez's MSc Thesis</a>.
+		</p>
+	</li>
+	<li>
+		<b>Applications of computer-aided verification</b>
+		<p>We have successfully applied computer-aided verification systems such as <a href="https://dafny.org/">Dafny</a> to verify the <a href="#journals/jlap/MartinMartinMRRR23">NavFn planner</a> of the Navigation Stack of ROS. We have also developed a methodology to verify <a href="TODO">greedy algorithms</a> and <a href="TODO">dynamic programming-based algorithms</a>.
+	</li>
+	<li>
+		<b>Verification platforms</b>
+		<p>
+			I have done research on <a href="#conf/lopstr/MontenegroPS15">intermediate representations</a> for program verification, as part of the CAVI-ART project (2014-2021), and also I have devised SMT-based verification condition generators for the <a href="TODO">Elixir</a> functional language and <a href="">WebAssembly</a> bytecode.
+		</p>
+	</li>
+</ul>
+
+<h3>Past research areas</h3>
+
+<p>Before embarking on program verification, my main research area used to be static analysis of programs. In particular:</p>
+
+<ul>	
+	<li><b>Type systems</b>
+	<p>
+		We have extended Dialyzer's type system (used in Erlang) with polymorphic types (see <a href="#journals/vlc/Lopez-FraguasMS20">COLA 2020</a> paper and <a href="theses.html#Suarez2022">Gorka Suarez's PhD Thesis</a>). We have also developed an extension of <a href="https://ucsd-progsys.github.io/liquidhaskell/">liquid types</a> in order to allow quantified properties on arrays (see <a href="#conf/atva/MontenegroNPS17">ATVA 17</a> and <a href="#journals/tocl/MontenegroNPS20">TOCL 2020</a>).
+	</p>
+	</li>
+	<li><b>Safe: explicit memory management with pointer safety and resource analysis</b>
+	<p>
+		<a href="https://dalila.sip.ucm.es/safe">Safe</a> was a research platform aimed at investigating the suitability of functional languages for programming devices with strict memory requirements. It consisted in a first-order functional programming language which provided semiexplicit memory management through two mechanisms: region-based memory management (inferred by the compiler) and destructive pattern matching (specified by the programmer). We have developed a <a href="#conf/ppdp/MontenegroPS08">type-based analysis</a> guaranteeing the absence of dangling pointers due to the latter, and an <a href="#journals/scp/MontenegroPS15a">abstract-interpretion analysis</a> to infer upper bounds of memory consumption.
+	</p>
+	</li>	
+</ul>
+
+<h2>Refereed publications</h2>
+
+<ul class="papers">
+        <li id="journals/jlap/MartinMartinMRRR23"><span class="paper">
+            <span class="title">Verification of the ROS NavFn planner using executable specification languages</span><br/>
+            <span class="authors">Enrique Martin-Martin, Manuel Montenegro, Adrián Riesco, Juan Rodríguez-Hortalá, Rubén Rubio</span><br/>
+            <span class="where">In Journal of Logical and Algebraic Methods in Programming, vol. 132, page 100860 (2023)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.jlamp.2023.100860">View</a></span>
+            <span class="button"><a href="pdf/journals_jlap_MartinMartinMRRR23.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/jlap/BlazquezMS23"><span class="paper">
+            <span class="title">Verification of mutable linear data structures and iterator-based algorithms in Dafny</span><br/>
+            <span class="authors">Jorge Blázquez, Manuel Montenegro, Clara Segura</span><br/>
+            <span class="where">In Journal of Logical and Algebraic Methods in Programming, vol. 134, page 100875 (2023)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.jlamp.2023.100875">View</a></span>
+            <span class="button"><a href="pdf/journals_jlap_BlazquezMS23.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/seke/Martin-MartinMR22"><span class="paper">
+            <span class="title">Improving Database Learning with an Automatic Judge</span><br/>
+            <span class="authors">Enrique Martin-Martin, Manuel Montenegro, Adrián Riesco, Rubén Rubio</span><br/>
+            <span class="where">In The 34th International Conference on Software Engineering and Knowledge Engineering, SEKE 2022, KSIR Virtual Conference Center, USA, July 1 - July 10, 2022. KSI Research Inc (2022)</span><br/>
+            <span class="button"><a href="https://doi.org/10.18293/SEKE2022-025">View</a></span>
+            <span class="button"><a href="pdf/conf_seke_Martin_MartinMR22.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/tocl/MontenegroNPS20"><span class="paper">
+            <span class="title">Extending Liquid Types to Arrays</span><br/>
+            <span class="authors">Manuel Montenegro, Susana Nieva, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In ACM Transactions on Computational Logic (TOCL), vol. 21, pages 13:1-13:41 (2020)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1145/3362740">View</a></span>
+            <span class="button"><a href="pdf/journals_tocl_MontenegroNPS20.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/vlc/Lopez-FraguasMS20"><span class="paper">
+            <span class="title">Deriving overloaded success type schemes in Erlang</span><br/>
+            <span class="authors">Francisco Javier López-Fraguas, Manuel Montenegro, Gorka Suárez-García</span><br/>
+            <span class="where">In Journal of Computer Languages, vol. 58, page 100965 (2020)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.cola.2020.100965">View</a></span>
+            <span class="button"><a href="pdf/journals_vlc_Lopez_FraguasMS20.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/lpar/Lopez-FraguasMS18"><span class="paper">
+            <span class="title">Polymorphic success types for Erlang</span><br/>
+            <span class="authors">Francisco Javier López-Fraguas, Manuel Montenegro, Gorka Suárez-García</span><br/>
+            <span class="where">In LPAR-22. 22nd International Conference on Logic for Programming, Artificial Intelligence and Reasoning, Awassa, Ethiopia, 16-21 November 2018. EPiC Series in Computing, vol. 57. EasyChair (2018)</span><br/>
+            <span class="button"><a href="https://doi.org/10.29007/w2m2">View</a></span>
+            <span class="button"><a href="pdf/conf_lpar_Lopez_FraguasMS18.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/atva/MontenegroNPS17"><span class="paper">
+            <span class="title">Liquid Types for Array Invariant Synthesis</span><br/>
+            <span class="authors">Manuel Montenegro, Susana Nieva, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In Automated Technology for Verification and Analysis - 15th International Symposium, ATVA 2017, Pune, India, October 3-6, 2017, Proceedings. Lecture Notes in Computer Science, vol. 10482. Springer (2017)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-319-68167-2_20">View</a></span>
+            <span class="button"><a href="pdf/conf_atva_MontenegroNPS17.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/flops/Lopez-FraguasMR16"><span class="paper">
+            <span class="title">Polymorphic Types in Erlang Function Specifications</span><br/>
+            <span class="authors">Francisco Javier López-Fraguas, Manuel Montenegro, Juan Rodríguez-Hortalá</span><br/>
+            <span class="where">In Functional and Logic Programming - 13th International Symposium, FLOPS 2016, Kochi, Japan, March 4-6, 2016, Proceedings. Lecture Notes in Computer Science, vol. 9613. Springer (2016)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-319-29604-3_12">View</a></span>
+            <span class="button"><a href="pdf/conf_flops_Lopez_FraguasMR16.pdf">PDF</a></span>
+        </span></li>
+    
+        <li><span class="paper">
+            <span class="title">Falsification of Java Assertions Using Automatic Test-Case Generators</span><br/>
+            <span class="authors">Rafael Caballero, Manuel Montenegro, Herbert Kuchen, Vincent von Hof</span><br/>
+            <span class="where">In International Journal on Advances in Systems and Measurements, vol 9(3-4). Elsevier. ISSN 1942-261x. Pages 177-187 (2016)</span><br/>
+            <span class="button"><a href="http://www.thinkmind.org/index.php?view=article&articleid=sysmea_v9_n34_2016_5">View</a></span>
+            <span class="button"><a href="pdf/Caballero_MKH15_2.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/scp/MontenegroPS15"><span class="paper">
+            <span class="title">Shape analysis in a functional language by using regular languages</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In Science of Computer Programming, vol. 111, pages 51-78 (2015)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.scico.2014.12.006">View</a></span>
+            <span class="button"><a href="pdf/journals_scp_MontenegroPS15.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/scp/MontenegroPS15a"><span class="paper">
+            <span class="title">Space consumption analysis by abstract interpretation: Inference of recursive functions</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In Science of Computer Programming, vol. 111, pages 426-457 (2015)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.scico.2014.04.006">View</a></span>
+            <span class="button"><a href="pdf/journals_scp_MontenegroPS15a.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/scp/MontenegroPS15b"><span class="paper">
+            <span class="title">Space consumption analysis by abstract interpretation: Reductivity properties</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In Science of Computer Programming, vol. 111, pages 458-482 (2015)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.scico.2014.04.014">View</a></span>
+            <span class="button"><a href="pdf/journals_scp_MontenegroPS15b.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/lopstr/CaballeroMKH15"><span class="paper">
+            <span class="title">Checking Java Assertions Using Automated Test-Case Generation</span><br/>
+            <span class="authors">Rafael Caballero, Manuel Montenegro, Herbert Kuchen, Vincent von Hof</span><br/>
+            <span class="where">In Logic-Based Program Synthesis and Transformation - 25th International Symposium, LOPSTR 2015, Siena, Italy, July 13-15, 2015. Revised Selected Papers. Lecture Notes in Computer Science, vol. 9527. Springer (2015)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-319-27436-2_13">View</a></span>
+            
+        </span></li>
+    
+        <li id="conf/lopstr/MontenegroPS15"><span class="paper">
+            <span class="title">A Generic Intermediate Representation for Verification Condition Generation</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña, Jaime Sánchez-Hernández</span><br/>
+            <span class="where">In Logic-Based Program Synthesis and Transformation - 25th International Symposium, LOPSTR 2015, Siena, Italy, July 13-15, 2015. Revised Selected Papers. Lecture Notes in Computer Science, vol. 9527. Springer (2015)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-319-27436-2_14">View</a></span>
+            <span class="button"><a href="pdf/conf_lopstr_MontenegroPS15.pdf">PDF</a></span>
+        </span></li>
+    
+        <li><span class="paper">
+            <span class="title">Automatic Falsification of Java Assertions</span><br/>
+            <span class="authors">Rafael Caballero, Manuel Montenegro, Herbert Kuchen, Vincent von Hof</span><br/>
+            <span class="where">In 7th International Conference on Advances in System Testing and Validation Lifecycle, VALID 2015. ISBN 9781612084411. Pages 36-41. IARIA (2015)</span><br/>
+            
+            <span class="button"><a href="pdf/Caballero_MKH15.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/concurrency/KerstenGSME14"><span class="paper">
+            <span class="title">ResAna: a resource analysis toolset for (real-time) JAVA</span><br/>
+            <span class="authors">Rody W. J. Kersten, Bernard van Gastel, Olha Shkaravska, Manuel Montenegro, Marko C. J. D. van Eekelen</span><br/>
+            <span class="where">In Concurrency and Computation: Practice and Experience, vol. 26, pages 2432-2455 (2014)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1002/cpe.3154">View</a></span>
+            <span class="button"><a href="pdf/journals_concurrency_KerstenGSME14.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/iandc/MontenegroPS14"><span class="paper">
+            <span class="title">A resource semantics and abstract machine for Safe: A functional language with regions and explicit deallocation</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In Information and Computation, vol. 235, pages 3-35 (2014)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.ic.2014.01.003">View</a></span>
+            <span class="button"><a href="pdf/journals_iandc_MontenegroPS14.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/ppdp/MontenegroPS13"><span class="paper">
+            <span class="title">Shape analysis in a functional language by using regular languages</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In 15th International Symposium on Principles and Practice of Declarative Programming, PPDP '13, Madrid, Spain, September 16-18, 2013. ACM (2013)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1145/2505879.2505893">View</a></span>
+            <span class="button"><a href="pdf/conf_ppdp_MontenegroPS13.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/jtres/KerstenSGME12"><span class="paper">
+            <span class="title">Making resource analysis practical for real-time Java</span><br/>
+            <span class="authors">Rody Kersten, Olha Shkaravska, Bernard van Gastel, Manuel Montenegro, Marko C. J. D. van Eekelen</span><br/>
+            <span class="where">In The 10th International Workshop on Java Technologies for Real-time and Embedded Systems, JTRES '12, Copenhagen, Denmark, October 24-26, 2012. ACM (2012)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1145/2388936.2388959">View</a></span>
+            <span class="button"><a href="pdf/conf_jtres_KerstenSGME12.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/fopara/MontenegroSEP11"><span class="paper">
+            <span class="title">Interpolation-Based Height Analysis for Improving a Recurrence Solver</span><br/>
+            <span class="authors">Manuel Montenegro, Olha Shkaravska, Marko C. J. D. van Eekelen, Ricardo Peña</span><br/>
+            <span class="where">In Foundational and Practical Aspects of Resource Analysis - Second International Workshop, FOPARA 2011, Madrid, Spain, May 19, 2011, Revised Selected Papers. Lecture Notes in Computer Science, vol. 7177. Springer (2011)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-642-32495-6_3">View</a></span>
+            <span class="button"><a href="pdf/conf_fopara_MontenegroSEP11.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/ifm/DiosMP10"><span class="paper">
+            <span class="title">Certified Absence of Dangling Pointers in a Language with Explicit Deallocation</span><br/>
+            <span class="authors">Javier de Dios, Manuel Montenegro, Ricardo Peña</span><br/>
+            <span class="where">In Integrated Formal Methods - 8th International Conference, IFM 2010, Nancy, France, October 11-14, 2010. Proceedings. Lecture Notes in Computer Science, vol. 6396. Springer (2010)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-642-16265-7_22">View</a></span>
+            <span class="button"><a href="pdf/conf_ifm_DiosMP10.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="journals/entcs/MontenegroPS09"><span class="paper">
+            <span class="title">A Resource-Aware Semantics and Abstract Machine for a Functional Language with Explicit Deallocation</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña-Marí, Clara Segura</span><br/>
+            <span class="where">In Electronic Notes in Theoretical Computer Science (ENTCS), vol. 246, pages 167-182 (2009)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1016/j.entcs.2009.07.021">View</a></span>
+            <span class="button"><a href="pdf/journals_entcs_MontenegroPS09.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/fopara/MontenegroPS09"><span class="paper">
+            <span class="title">A Space Consumption Analysis by Abstract Interpretation</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña, Clara Segura</span><br/>
+            <span class="where">In Foundational and Practical Aspects of Resource Analysis - First International Workshop, FOPARA 2009, Eindhoven, The Netherlands, November 6, 2009, Revised Selected Papers. Lecture Notes in Computer Science, vol. 6324. Springer (2009)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-642-15331-0_3">View</a></span>
+            <span class="button"><a href="pdf/conf_fopara_MontenegroPS09.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/wflp/MontenegroPS09"><span class="paper">
+            <span class="title">A Simple Region Inference Algorithm for a First-Order Functional Language</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña-Marí, Clara Segura</span><br/>
+            <span class="where">In Functional and Constraint Logic Programming, 18th International Workshop, WFLP 2009, Brasilia, Brazil, June 28, 2009, Revised Selected Papers. Lecture Notes in Computer Science, vol. 5979. Springer (2009)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-642-11999-6_10">View</a></span>
+            <span class="button"><a href="pdf/conf_wflp_MontenegroPS09.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/lopstr/MontenegroPS08"><span class="paper">
+            <span class="title">An Inference Algorithm for Guaranteeing Safe Destruction</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Peña-Marí, Clara Segura</span><br/>
+            <span class="where">In Logic-Based Program Synthesis and Transformation, 18th International Symposium, LOPSTR 2008, Valencia, Spain, July 17-18, 2008, Revised Selected Papers. Lecture Notes in Computer Science, vol. 5438. Springer (2008)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1007/978-3-642-00515-2_10">View</a></span>
+            <span class="button"><a href="pdf/conf_lopstr_MontenegroPS08.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/ppdp/MontenegroPS08"><span class="paper">
+            <span class="title">A type system for safe memory management and its proof of correctness</span><br/>
+            <span class="authors">Manuel Montenegro, Ricardo Pena, Clara Segura</span><br/>
+            <span class="where">In Proceedings of the 10th International ACM SIGPLAN Conference on Principles and Practice of Declarative Programming, July 15-17, 2008, Valencia, Spain. ACM (2008)</span><br/>
+            <span class="button"><a href="https://doi.org/10.1145/1389449.1389468">View</a></span>
+            <span class="button"><a href="pdf/conf_ppdp_MontenegroPS08.pdf">PDF</a></span>
+        </span></li>
+    
+        <li id="conf/sfp/Pena-MariSM06"><span class="paper">
+            <span class="title">A sharing analysis for SAFE</span><br/>
+            <span class="authors">Ricardo Peña-Marí, Clara Segura, Manuel Montenegro</span><br/>
+            <span class="where">In Revised Selected Papers from the Seventh Symposium on Trends in Functional Programming, TFP 2006, Nottingham, United Kingdom, 19-21 April 2006. Trends in Functional Programming, vol. 7. Intellect (2006)</span><br/>
+            
+            <span class="button"><a href="pdf/conf_sfp_Pena_MariSM06.pdf">PDF</a></span>
+        </span></li>
+    </ul>
+
+<h2>PhD Thesis</h2>
+
+<ul class="papers phd">
+    <li id="Suarez2022"><span class="paper">
+       <span class="title">Safety properties and memory bound analysis in a functional language without a garbage collector&nbsp;🇬🇧</span><br/>
+       <span class="authors">Manuel Montenegro Montes</span><br/>
+       <span>Supervised by Ricardo Peña and Clara Segura</span><br/>
+Defended: November 2011<br/><span class="button"><a href="https://docta.ucm.es/entities/publication/16b9e9af-483b-41dc-bf6e-ce94473a3acb">View</a></span> <span class="button"><a href="pdf/MontenegroPhD.pdf">PDF</a></span>    </span></li>
+</ul>
+		</main>
+	</body>
+</html>

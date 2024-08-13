@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Manuel Montenegro Montes homepage</title>
+		<link href="https://css.gg/css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@500;700;900&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/normal.css">
+		<script>const current = "contact";</script>
+		<script src="js/normal.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo-button">
+				<a id="logo_small" href="index.html">M<sup>3</sup></a>
+				<a id="logo_big" href="index.html">Manuel Montenegro Montes</a>
+				<div id="menubutton" onclick="toggleMenu()">
+					<img id="toggle" src="img/menu.svg">		
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li data-content="about" id="about"><a href="about.html">About</a></li>
+					<li data-content="research" id="research"><a href="research.html">Research</a></li>
+					<!-- <li data-content="teaching"><a href="">Teaching</a></li> -->
+					<li data-content="theses" id="theses"><a href="theses.html">Theses</a></li>
+					<li data-content="contact" id="contact"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+            <script>
+	const chs = [110, 112, 111, 117, 102, 111, 102, 104, 115, 112, 65, 103, 101, 106, 47, 118, 100, 110, 47, 102, 116];
+	const mlt = [327, 291, 315, 324, 348, 333, 174];
+	let str = chs.map(x => String.fromCharCode(x - 1)).join("");
+	let mlt_str = mlt.map(x => String.fromCharCode(x / 3)).join("");
+	document.addEventListener("DOMContentLoaded", () => {
+		let link = document.getElementById('str')
+		link.innerText = str;
+		link.href = mlt_str + str;
+	});
+</script>
+<h1>Contact</h1>
+<h2>Address</h2>
+<p><a href="https://www.ucm.es/dsic-1-1">Departamento de Sistemas Informáticos y Computación</a><br/>
+<a href="https://informatica.ucm.es">Facultad de Informática</a> (<a href="https://www.ucm.es">UCM</a>)<br/>
+C/ Prof. José García Santesmases, s/n<br/>
+28040 - Madrid
+</p>
+<h2>Phone</h2>
+<p>(+34) 91 3947648</p>
+<h2>Email</h2>
+<p><a id="str"></a></p>
+		</main>
+	</body>
+</html>

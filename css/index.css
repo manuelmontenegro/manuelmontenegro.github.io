@@ -1,0 +1,133 @@
+html {
+	height: 100%;
+}
+
+
+body {
+	margin: 0px;
+	font-family: 'Raleway', sans-serif;
+	display: flex;
+	min-height: 100%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+h1, h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+}
+
+
+main {
+	background-color: black;
+	color: white;
+	max-width: 768px;
+	margin: auto;
+	padding: 30px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row;
+}
+
+div.picture {
+	margin: 10px;
+	text-align: center;
+}
+
+
+div.picture img {
+	max-width: 200px;
+	border-radius: 50%;
+	filter: grayscale(0.8);
+	transition: filter 0.5s;
+}
+
+
+div.picture img:hover {
+	filter: grayscale(0);
+}
+
+
+div.text {
+	margin: 10px;
+	text-align: center;
+}
+
+div.text a {
+	text-decoration: none;
+	color: white;
+}
+
+div.text a:hover {
+	color: black;
+	background-color: white;
+}
+
+div.text ul {
+	margin: 3em 0px 0px 0px;
+	display: flex;
+	padding: 0px;
+	justify-content: space-between;
+}
+
+div.text li {
+	list-style-type: none;
+}
+
+div.text li a {
+	background-color: white;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	color: black;	
+}
+
+div.text li a:hover {
+	background-color: blue;
+	color: white;
+}
+
+#about:hover {
+	background-color: #f232a6;
+}
+
+#research:hover {
+	background-color: #1679cd;
+}
+
+#theses:hover {
+	background-color: #55bb45;
+}
+
+#contact:hover {
+	background-color: #d0840e;
+}
+
+
+
+@media (max-width: 768px) {
+	body {
+		background-color: black;
+	}
+
+	main {
+		flex-direction: column;
+		border-radius: 0;
+		padding: 5px;
+	}
+
+	div.text ul {
+		flex-direction: column;
+	}
+
+	div.text li a {
+		display: inline-block;
+		width: 80%;
+		margin-top: 0.5em;
+	}
+
+
+}
